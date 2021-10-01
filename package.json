@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juste-A/Portfolio.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "bootstrap-v5",
+    "sass",
+    "personal-website",
+    "portfolio",
+    "personal-page"
+  ],
+  "author": "Juste Astrauskaite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juste-A/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Juste-A/Portfolio#readme"
+}
