@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Juste-A/Portfolio/issues"
   },
-  "homepage": "https://github.com/Juste-A/Portfolio#readme"
+  "homepage": "https://github.com/Juste-A/Portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
 }
