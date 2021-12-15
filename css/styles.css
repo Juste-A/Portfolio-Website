@@ -1,7 +1,113 @@
+:root {
+    --white: #EDECE8;
+    --black: #151613;
+    --lilac: #71697A;
+    --orange: #FB8B24;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--white);
 }
 
 /* Nav bar */
+
+li,
+a,
+button {
+    font-family: 'Noto Sans Display', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--black);
+    text-decoration: none;
+}
+
+/* header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    min-height: 8vh;
+} */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    min-height: 8vh;
+}
+
+.logo {
+    cursor: pointer;
+    height: 10rem;
+    margin-right: auto;
+}
+
+.nav_links {
+
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.nav_links li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: var(--orange);
+}
+
+/* button {
+    padding: 10px 30px;
+    background-color: rgba(113, 105, 122, 1);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(113, 105, 122, 0.8);
+} */
+.burger {
+    display: none;
+}
+
+.fa-bars {
+    padding: 5px;
+    font-size: 1.5rem;
+    margin: 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .nav_links li {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: var(--lilac);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
