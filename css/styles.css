@@ -17,7 +17,8 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'Montserrat',
+        sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -222,18 +223,26 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 }
 
 .intro-text {
-    text-align: left;
+    text-align: right;
     color: var(--black);
+    margin-right: 15%;
+    margin-top: 10%;
 }
 
 .intro-text h1 {
     font-size: 3rem;
-    margin-bottom: 24px;
+    margin-bottom: 1.2rem;
 }
 
 .intro-text h2 {
     font-size: 2rem;
-    margin-bottom: 24px;
+    margin-bottom: 2rem;
+}
+
+.tag-line {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .intro-img {
@@ -241,6 +250,7 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-right: 5%;
 }
 
 .intro-img img {
@@ -251,9 +261,9 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     font-size: 4rem;
     background: #ee0979;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: -webkit-linear-gradient(to bottom, #ff6a00, #ee0979);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to bottom, #ff6a00, #ee0979);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: 100%;
     -webkit-background-clip: text;
@@ -263,6 +273,7 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 }
 
 .pronounciation {
+    font-size: 2rem;
     font-weight: 100;
     font-style: italic;
 }
@@ -271,16 +282,41 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     border-bottom: 4px solid var(--lilac);
 }
 
+.vertical-text,
+.text-or,
 .download-cv-btn {
-    font-size: 1.8rem;
+    display: inline-block;
+}
+
+.vertical-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-transform: uppercase;
+    position: relative;
+    padding-top: 2rem;
+}
+
+.text-or {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 1.2rem;
+    position: relative;
+    top: -80px;
+}
+
+.download-cv-btn {
+    font-size: 1.2rem;
     background: rgb(251, 139, 36);
     background: linear-gradient(90deg, rgba(251, 139, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
     padding: 15px 40px;
     border: none;
     border-radius: 4px;
-    margin-top: 2rem;
     cursor: pointer;
     position: relative;
+    top: -80px;
     transition: all 0.35s;
     outline: none;
 }
@@ -292,6 +328,22 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     text-decoration: none;
 }
 
+.download-cv-btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--lilac);
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.download-cv-btn:hover:after {
+    width: 100%
+}
+
 /* For smaller screens */
 @media screen and (max-width: 1089px) {
     .intro-container {
@@ -300,16 +352,38 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 
     .intro-text h1 {
         font-size: 2rem;
-        margin-bottom: 18px;
+        margin-bottom: 1rem;
     }
 
     .intro-text h2 {
         font-size: 1.25rem;
-        margin-bottom: 18px;
+        margin-bottom: 1.5rem;
+    }
+
+    .tag-line {
+        font-size: 1rem;
+    }
+
+    .vertical-text {
+        font-size: 0.8rem;
     }
 
     .name {
         font-size: 3rem;
+    }
+
+    .download-cv-btn {
+        font-size: 1rem;
+        background: rgb(251, 139, 36);
+        background: linear-gradient(90deg, rgba(251, 139, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
+        padding: 12px 25px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        position: relative;
+        top: -80px;
+        transition: all 0.35s;
+        outline: none;
     }
 
     .intro-img img {
@@ -317,4 +391,90 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     }
 }
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 798px) {
+    .intro-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .intro-text {
+        margin: 0 auto;
+    }
+
+    .intro-img img {
+        height: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Start of About Me section */
+.about-me-container {
+    background-color: #fff;
+    color: var(--black);
+    border: 25px solid var(--white);
+    padding: 2rem 8rem;
+    margin: 0 auto;
+    display: block;
+    font-size: 1.2rem;
+    /* text-align: justify; */
+}
+
+.section-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ee0979;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #ff6a00, #ee0979);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ff6a00, #ee0979);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.about-intro {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about-intro:before {
+    border-bottom: 0.2rem solid var(--black);
+    content: "";
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 10%;
+}
+
+.about-me-container p {
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+.interests-heading {
+    font-size: 2rem;
+    background: rgb(251, 139, 36);
+    background: linear-gradient(90deg, rgba(251, 139, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.interests {
+    padding: 2rem;
+    line-height: 2rem;
+}
