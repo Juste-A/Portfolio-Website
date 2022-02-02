@@ -448,7 +448,7 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     text-transform: uppercase;
 }
 
-.about-intro:before {
+.section-heading:before {
     border-bottom: 0.2rem solid var(--black);
     content: "";
     bottom: 0;
