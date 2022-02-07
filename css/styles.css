@@ -19,7 +19,7 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     box-sizing: border-box;
     font-family: 'Montserrat',
         sans-serif;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 /* Nav bar */
@@ -34,6 +34,7 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 .navbar-container {
@@ -234,6 +235,28 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     margin-bottom: 1.2rem;
 }
 
+/* Cursor */
+/* .txt-type>.txt {
+    border-right: 5px solid var(--orange);
+} */
+
+.txt-type>.txt::after {
+    content: "";
+    width: 5px;
+    height: 2.8rem;
+    background: var(--orange);
+    display: inline-block;
+    animation: cursor-blink 1s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+}
+
+
+
 .intro-text h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -414,14 +437,19 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 
 /* Start of About Me section */
 .about-me-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     background-color: #fff;
     color: var(--black);
     border: 25px solid var(--white);
-    padding: 2rem 8rem;
+    padding: 2rem;
     margin: 0 auto;
-    display: block;
     font-size: 1.2rem;
-    /* text-align: justify; */
+}
+
+.about-me {
+    margin-left: 3rem;
+    text-align: justify;
 }
 
 .section-heading {
@@ -439,28 +467,31 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    margin-bottom: 2rem;
 }
 
 .about-intro {
-    font-size: 1.4rem;
-    padding: 1rem 0;
+    font-size: 1.2rem;
+    padding: 2rem 0;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.section-heading:before {
-    border-bottom: 0.2rem solid var(--black);
-    content: "";
-    bottom: 0;
-    height: 1px;
-    left: 0;
-    position: absolute;
-    width: 10%;
-}
-
 .about-me-container p {
     padding: 1rem 0;
+    padding-top: 2rem;
     line-height: 2rem;
+}
+
+.interests-container {
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.interests-container img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 }
 
 .interests-heading {
@@ -476,5 +507,133 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 
 .interests {
     padding: 2rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
+}
+
+@media screen and (max-width: 798px) {
+    .about-me-container {
+        display: grid;
+        grid-template-areas:
+            "t t t t"
+            "t t t t"
+            "t t t t"
+            "i i i i";
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90%;
+    }
+
+    .about-me {
+        grid-area: t;
+        margin: auto 1rem;
+    }
+
+    .interests-container {
+        grid-area: i;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .interests-container img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .interests-with-head {
+        margin: 0 auto;
+    }
+
+    .interests-heading,
+    .interests {
+        padding: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 598px) {
+    .about-me-container {
+        font-size: 0.8;
+        border: 10px solid var(--white);
+        padding: 5px;
+    }
+
+    .interests-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+}
+
+/* Skills section */
+.skills {
+    background-color: #fff;
+    color: var(--black);
+    border: 25px solid var(--white);
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icon {
+    height: 8rem;
+    width: auto;
+
+    background-color: var(--white);
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--black);
+    padding: 1rem;
+    margin: 1.5rem;
+}
+
+@media screen and (max-width: 979px) {
+    .icon {
+        height: 6rem;
+        width: auto;
+        margin: 0.75rem;
+        padding: 0.5rem;
+    }
+}
+
+/* @media screen and (max-width: 800px) {
+    .skills {
+        padding: 3rem;
+    }
+
+    .icon {
+        height: 5rem;
+        width: auto;
+        margin: 1rem;
+
+
+    }
+} */
+
+@media screen and (max-width: 726px) {
+    .icon {
+        height: 4rem;
+        width: auto;
+        margin: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .skills {
+        border: 10px solid var(--white);
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .icon {
+        height: 2.75rem;
+        width: auto;
+        margin: 0.25rem;
+    }
 }

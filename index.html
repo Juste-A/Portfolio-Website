@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juste Astrauskaite</title>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#home" id="navbar-logo">Juste {A}</a>
+            <a href="#home-page" id="navbar-logo">Juste {A}</a>
             <div class="navbar-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -35,9 +36,9 @@
     </nav>
 
     <!-- Home section -->
-    <section class="intro-container">
+    <section class="intro-container" id="home-page">
         <div class="intro-text">
-            <h1><span class="txt-type" data-wait="3000" data-words='["Hello", "Hola", "Labas", "Привет"]'></span>,
+            <h1><span class="txt-type" data-wait="3000" data-words='["Hello,", "Labas,", "Hola,", "Привет,"]'></span>
                 my name is
                 <br>
                 <span class="name">Juste</span><span class="pronounciation"> /YUS-teh/.</span></h1>
@@ -47,7 +48,8 @@
             <p class="tag-line">Want to know more?</p>
             <p class="vertical-text">Start<br />scrolling</p>
             <p class="text-or">or</p>
-            <button class="download-cv-btn"><a href="#">Download CV</a></button>
+            <button class="download-cv-btn"><a href="/cv/Juste Astrauskaite - Junior developer.pdf" download>Download
+                    CV</a></button>
         </div>
         <div class="intro-img">
             <img src="./images/portrait-ai.png" alt="portrait line drawing">
@@ -56,31 +58,71 @@
     </section>
 
     <!-- About me section -->
-    <section class="about-me-container">
-        <h2 class="section-heading">About me</h2>
-        <p class="about-intro">I am a junior developer who enjoys working in front-end development but also gets a kick
-            out of back-end
-            development.</p>
-        <p>After working in various customer service roles for the past 10 years, I was seeking a career change where I
-            would be continuously challenged. The idea of Software Development originated from my intention of creating
-            an online drop-shipping store, when I realised I enjoyed customising my Shopify website theme more than
-            anything
-            else.</p>
-        <p>After going a self-taught route for a while, I enrolled in a self-funded technical training course which
-            later led me to a twelve-week intensive bootcamp, where I completed projects using HTML, CSS, JavaScript,
-            MySQL, MongoDB and Python.</p>
-        <p>When I'm not coding I'm usualy exploring the city, learning something new or running (after a toddler).</p>
-        <h3 class="interests-heading">Other interests include (but does not limit to):</h3>
-        <ul class="interests">
-            <li class="interests-item">Travel</li>
-            <li class="interests-item">Books</li>
-            <li class="interests-item">DIY</li>
-            <li class="interests-item">Building Furniture</li>
-            <li class="interests-item">Walking</li>
-            <li class="interests-item">Animals</li>
-        </ul>
+    <section class="about-me-container" id="about-page">
+        <article class="about-me">
+            <h2 class="section-heading">About me</h2>
+            <p class="about-intro">I am a junior developer who enjoys working in front-end development but also gets a
+                kick
+                out of back-end
+                development.</p>
+            <p>After working in various customer service roles for the past 10 years, I was seeking a career change
+                where I
+                would be continuously challenged. The idea of Software Development originated from my intention of
+                creating
+                an online drop-shipping store, when I realised I enjoyed customising my Shopify website theme more than
+                anything
+                else.</p>
+            <p>After going a self-taught route for a while, I enrolled in a self-funded technical training course which
+                later led me to a twelve-week intensive bootcamp, where I completed projects using HTML, CSS,
+                JavaScript,
+                MySQL, MongoDB and Python.</p>
+            <p>When I'm not coding I'm usualy exploring the city, learning something new or running (after a toddler).
+            </p>
+        </article>
+        <aside class="interests-container">
+            <div class="interests-with-head">
+                <h3 class="interests-heading">Other interests:</h3>
+                <ul class="interests">
+                    <li class="interests-item">Travel</li>
+                    <li class="interests-item">Books</li>
+                    <li class="interests-item">DIY</li>
+                    <li class="interests-item">Building Furniture</li>
+                    <li class="interests-item">Walking</li>
+                    <li class="interests-item">Animals</li>
+                </ul>
+            </div>
+            <img src="/images/interests-img.png" alt="">
+        </aside>
     </section>
-
+    <section class="skills" id="skills-page">
+        <h2 class="section-heading">Skills</h2>
+        <div class="skills-icons">
+            <div class="first-set">
+                <img class="icon" src="/icons/html-svgrepo-com.svg" alt="HTML" loading="lazy">
+                <img class="icon" src="/icons/css-3-svgrepo-com.svg" alt="CSS" loading="lazy">
+                <img class="icon" src="/icons/javascript-svgrepo-com.svg" alt="Javascript" loading="lazy">
+                <img class="icon" src="/icons/jquery-svgrepo-com.svg" alt="jQuery" loading="lazy">
+                <img class="icon" src="/icons/bootstrap-svgrepo-com.svg" alt="Bootstrap" loading="lazy">
+            </div>
+            <div class="second-set">
+                <img class="icon" src="/icons/sass-svgrepo-com.svg" alt="Sass" loading="lazy">
+                <img class="icon" src="/icons/python-svgrepo-com.svg" alt="Python" loading="lazy">
+                <img class="icon" src="/icons/pandas-svgrepo-com.svg" alt="Pandas" loading="lazy">
+                <img class="icon" src="/icons/flask-original-wordmark.svg" alt="Flask" loading="lazy">
+                <img class="icon" src="/icons/mysql-svgrepo-com.svg" alt="MySQL" loading="lazy">
+            </div>
+            <div class="third-set">
+                <img class="icon" src="/icons/4691284_mongodb_icon.svg" alt="mongoDB" loading="lazy">
+                <img class="icon" src="/icons/csharp-svgrepo-com.svg" alt="C-sharp" loading="lazy">
+                <img class="icon" src="/icons/dot-net-svgrepo-com.svg" alt=".NET" loading="lazy">
+                <img class="icon" src="/icons/node_1.svg" alt="nodeJS" loading="lazy">
+                <img class="icon" src="/icons/github-svgrepo-com.svg" alt="GitHub" loading="lazy">
+            </div>
+            <div class="fourth-set">
+                <img class="icon" src="/icons/vscode-fill-svgrepo-com.svg" alt="VS Code" loading="lazy">
+            </div>
+        </div>
+    </section>
 
     <script src="./js/script.js"></script>
 </body>
