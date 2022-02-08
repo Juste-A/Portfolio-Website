@@ -602,20 +602,6 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     }
 }
 
-/* @media screen and (max-width: 800px) {
-    .skills {
-        padding: 3rem;
-    }
-
-    .icon {
-        height: 5rem;
-        width: auto;
-        margin: 1rem;
-
-
-    }
-} */
-
 @media screen and (max-width: 726px) {
     .icon {
         height: 4rem;
@@ -636,4 +622,177 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
         width: auto;
         margin: 0.25rem;
     }
+}
+
+/* Projects section */
+.projects {
+    background-color: #fff;
+    color: var(--black);
+    border: 25px solid var(--white);
+    padding: 1rem;
+}
+
+.projects-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-img {
+    width: 65%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.projects-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.project-card {
+    text-align: center;
+    width: 40%;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--black);
+    padding: 20px;
+    margin: 2rem;
+}
+
+.project-button {
+    background: rgb(251, 139, 36);
+    background: linear-gradient(90deg, rgba(251, 139, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    margin: 1rem;
+}
+
+.project-button a {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.project-button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--lilac);
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.project-button:hover:after {
+    width: 100%;
+}
+
+/* Contact section */
+.contact-me-section {
+    background-color: #fff;
+    color: var(--black);
+    border: 25px solid var(--white);
+    padding: 1rem;
+}
+
+.contact-me-section h2 {
+    text-align: center;
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-me-container {
+    background: var(--white);
+    background: linear-gradient(to right, var(--white), #fff);
+    width: 85%;
+    border-radius: 11px;
+    padding: 20px 60px 40px 40px;
+    box-shadow: 0 3px 10px var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-details {
+    width: 30%;
+    height: 100%;
+}
+
+.contact-form {
+    width: 70%;
+    margin-left: 100px;
+}
+
+.contact-form>form>input {
+    display: block;
+}
+
+.phone-details,
+.email-address {
+    font-size: 1rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+.email-address .fas,
+.contact-content .fas {
+    font-size: 2rem;
+    margin: 0.75rem;
+    background: var(--black);
+    background: linear-gradient(90deg, rgba(251, 139, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.topic {
+    font-weight: bold;
+}
+
+.contact-button {
+    background: rgb(251, 139, 36);
+    background: linear-gradient(90deg, rgba(251, 139, 36, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(131, 58, 180, 1) 100%);
+    width: 8rem;
+    height: 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+    margin: 1rem;
+    color: var(--white);
+    z-index: 2;
+}
+
+.contact-button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--lilac);
+    transition: all 0.35s;
+    border-radius: 4px;
+}
+
+.contact-button:hover:after {
+    width: 100%;
 }

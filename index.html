@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#home-page" id="navbar-logo">Juste {A}</a>
+            <a href="#home" id="navbar-logo">Juste {A}</a>
             <div class="navbar-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -28,7 +28,6 @@
                 <li class="nav-item"><a href="#about-page" class="nav-links" id="about-page">About</a></li>
                 <li class="nav-item"><a href="#skills-page" class="nav-links" id="skills-page">Skills</a></li>
                 <li class="nav-item"><a href="#projects-page" class="nav-links" id="projects-page">Projects</a></li>
-                <li class="nav-item"><a href="#experience-page" class="nav-links" id="experience-page">Experience</a>
                 </li>
                 <li class="nav-btn"><a href="#contact-btn" class="button" id="contact">Contact</a></li>
             </ul>
@@ -36,7 +35,7 @@
     </nav>
 
     <!-- Home section -->
-    <section class="intro-container" id="home-page">
+    <section class="intro-container">
         <div class="intro-text">
             <h1><span class="txt-type" data-wait="3000" data-words='["Hello,", "Labas,", "Hola,", "Привет,"]'></span>
                 my name is
@@ -120,6 +119,64 @@
             </div>
             <div class="fourth-set">
                 <img class="icon" src="/icons/vscode-fill-svgrepo-com.svg" alt="VS Code" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects section -->
+    <section class="projects">
+        <h2 class="section-heading">Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="/images/breathing-app.gif" class="project-img" alt="Breathing app gif">
+                <h3 class="project-title">Breathe and Relax App</h3>
+                <p class="project-details">A guided breathing/ambient sounds app. The user can pick the amount of
+                    time they want to use it and choose different ambient sounds. The app will let the user know when
+                    to breath in/hold/breathe out. This project was created using HTML, CSS and JavaScript.</p>
+                <button class="project-button"><a href="https://juste-a.github.io/Meditation-app/" target="_blank"><i
+                            class="fas fa-eye"></i> Live</a></button>
+                <button class="project-button"><a href="https://github.com/Juste-A/Meditation-app" target="_blank"><i
+                            class="fab fa-github"></i> GitHub</a></button>
+            </div>
+            <div class="project-card">
+                <img src="/images/vegan-wine-checker.gif" class="project-img" alt="Vegan wine checker gif">
+                <h3 class="project-title">Vegan Wine Checker</h3>
+                <p class="project-details"> CRUD app where a user can search wines and see if they're vegan friendly. It
+                    has a database of almost 6000 wines, and can be updated by the user (add, delete, update
+                    functions as well as search). This project was created using Python, Pandas, MySQL, Flask and
+                    Bootstrap.</p>
+                <button class="project-button"><a href="#" target="_blank"><i class="fas fa-eye"></i> Live</a></button>
+                <button class="project-button"><a href="https://github.com/Juste-A/vegan-wine-checker"
+                        target="_blank"><i class="fab fa-github"></i> GitHub</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="contact-me-section">
+        <h2 class="section-heading">Contact</h2>
+        <div class="contact-content">
+            <div class="contact-me-container">
+                <div class="contact-details">
+                    <div class="phone-details">
+                        <i class="fas fa-phone"></i>
+                        <p class="topic">Phone</p>
+                        <p>+44 7901 858908</p>
+                    </div>
+                    <div class="email-address">
+                        <i class="fas fa-at"></i>
+                        <p class="topic">Email</p>
+                        <p>juste.astrauskaite@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Feeling chatty? Send me a message!</h3>
+                    <form action="" onsubmit="return false">
+                        <input name="name" type="text" placeholder="What's your name?" id="name" required>
+                        <input name="email" type="email" placeholder="And your e-mail?" id="email" required>
+                        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+                        <button class="contact-button" onclick="sendMessage();"><i class="far fa-paper-plane"></i> Send
+                            Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
