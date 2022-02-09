@@ -19,14 +19,17 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     box-sizing: border-box;
     font-family: 'Montserrat',
         sans-serif;
-    /* scroll-behavior: smooth; */
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Nav bar */
 
 .navbar {
     background: var(--white);
-    height: 70px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -910,4 +913,52 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
         display: inline-block;
     }
 
+}
+
+/* Footer section */
+footer {
+    background-color: var(--white);
+}
+
+footer p {
+    text-align: center;
+    color: var(--black);
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+/* @keyframes animateHeart {
+
+    0%,
+    100% {
+        font-size: 1rem;
+    }
+
+    10% {
+        font-size: 0.9rem;
+    }
+
+    30% {
+        font-size: 0.8rem;
+    }
+
+    50% {
+        font-size: 0.7rem;
+    }
+
+    70% {
+        font-size: 0.8rem;
+    }
+
+    90% {
+        font-size: 0.9rem;
+    }
+} */
+
+/* #heart {
+    animation: animateHeart 1s infinite;
+} */
+
+#heart {
+    transform: scale(1.5);
 }

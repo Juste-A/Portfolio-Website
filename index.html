@@ -17,25 +17,25 @@
 <body>
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#home" id="navbar-logo">Juste {A}</a>
+            <a href="#home-page" id="navbar-logo">Juste {A}</a>
             <div class="navbar-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#home-page" class="nav-links" id="home-page">Home</a></li>
-                <li class="nav-item"><a href="#about-page" class="nav-links" id="about-page">About</a></li>
-                <li class="nav-item"><a href="#skills-page" class="nav-links" id="skills-page">Skills</a></li>
-                <li class="nav-item"><a href="#projects-page" class="nav-links" id="projects-page">Projects</a></li>
+                <li class="nav-item"><a href="#home-page" class="nav-links">Home</a></li>
+                <li class="nav-item"><a href="#about-page" class="nav-links">About</a></li>
+                <li class="nav-item"><a href="#skills-page" class="nav-links">Skills</a></li>
+                <li class="nav-item"><a href="#projects-page" class="nav-links">Projects</a></li>
                 </li>
-                <li class="nav-btn"><a href="#contact-btn" class="button" id="contact">Contact</a></li>
+                <li class="nav-btn"><a href="#contact-me" class="button">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Home section -->
-    <section class="intro-container">
+    <section class="intro-container" id="home-page">
         <div class="intro-text">
             <h1><span class="txt-type" data-wait="3000" data-words='["Hello,", "Labas,", "Hola,", "Привет,"]'></span>
                 my name is
@@ -124,7 +124,7 @@
     </section>
 
     <!-- Projects section -->
-    <section class="projects">
+    <section class="projects" id="projects-page">
         <h2 class="section-heading">Projects</h2>
         <div class="projects-container">
             <div class="project-card">
@@ -151,7 +151,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-me-section">
+    <section class="contact-me-section" id="contact-me">
         <h2 class="section-heading">Contact</h2>
         <div class="contact-content">
             <div class="contact-me-container">
@@ -184,6 +184,11 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with <span id="heart">&#10084;</span> by Juste Astrauskaite</p>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>
