@@ -639,14 +639,19 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 }
 
 .project-img {
-    width: 65%;
+    width: 80%;
     height: auto;
     border-radius: 4px;
 }
 
-.projects-title {
+.project-title {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.project-details {
+    text-align: justify;
+    line-height: 1.5rem;
 }
 
 .project-card {
@@ -672,6 +677,7 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
     transition: all 0.35s;
     outline: none;
     margin: 1rem;
+    margin-bottom: 0;
 }
 
 .project-button a {
@@ -695,6 +701,16 @@ background: linear-gradient(90deg, rgba(251,139,36,1) 0%, rgba(255,112,195,1) 50
 
 .project-button:hover:after {
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 85%;
+    }
 }
 
 /* Contact section */
