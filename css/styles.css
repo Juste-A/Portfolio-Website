@@ -849,18 +849,6 @@ html {
     height: 8rem;
 }
 
-.message-sent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-    height: 100%;
-    margin: 1rem;
-    width: 70%;
-    margin-left: 50px;
-}
-
 @media screen and (max-width: 768px) {
     .contact-me-container {
         width: 95%;
