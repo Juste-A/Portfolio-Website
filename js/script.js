@@ -1,7 +1,7 @@
 const menu = document.querySelector("#mobile-menu");
 const menuLinks = document.querySelector(".nav-menu");
 
-// Display Mobile Menu
+/////////// Display Mobile Menu ///////////
 const mobileMenu = () => {
     menu.classList.toggle("is-active");
     menuLinks.classList.toggle("active");
@@ -9,7 +9,7 @@ const mobileMenu = () => {
 
 menu.addEventListener("click", mobileMenu);
 
-// Typewritter effect
+//////////////////// Typewritter effect //////////////
 const TypeWritter = function (txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
     this.words = words;
@@ -29,15 +29,15 @@ TypeWritter.prototype.type = function () {
 
     // Check if deleting
     if (this.isDeleting) {
-        // Remove char
+        // Remove character
         this.txt = fullTxt.substring(0, this.txt.length - 1);
 
     } else {
-        // Add char
+        // Add chararacter
         this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    // Insert txt into element
+    // Insert text into element
     this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
     // Initial type speed
@@ -64,10 +64,10 @@ TypeWritter.prototype.type = function () {
     setTimeout(() => this.type(), typeSpeed)
 }
 
-// Init on DOM Load
+// Initialise on DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
-// Init App
+// Initialise App
 function init() {
     const txtElement = document.querySelector('.txt-type');
     const words = JSON.parse(txtElement.getAttribute('data-words'));
@@ -75,3 +75,16 @@ function init() {
     //  Init Typewritter
     new TypeWritter(txtElement, words, wait);
 }
+
+
+//////////// Contact me form //////////////
+
+const isValidEmail = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+};
+
+const isValidPhone = (phone) => {
+    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    return re.test(String(phone).toLowerCase());
+};

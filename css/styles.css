@@ -760,6 +760,7 @@ html {
 .contact-form {
     width: 70%;
     margin-left: 50px;
+    padding-top: 2rem;
 }
 
 .contact-form>form>input {
@@ -790,10 +791,6 @@ html {
 
 .social-links .fab {
     cursor: pointer;
-}
-
-.contact-form {
-    padding-top: 2rem;
 }
 
 .topic {
@@ -850,6 +847,18 @@ html {
 
 .contact-form>form textarea {
     height: 8rem;
+}
+
+.message-sent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    margin: 1rem;
+    width: 70%;
+    margin-left: 50px;
 }
 
 @media screen and (max-width: 768px) {
